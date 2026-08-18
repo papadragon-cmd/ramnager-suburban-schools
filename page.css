@@ -1,0 +1,117 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( white, rgb(255, 192, 224), wheat , rgb(131, 131, 255) );
+    height: 120vh;
+    margin: 0 auto;
+    
+}
+.outer-page{
+    position :relative;
+    width: 20.5em;
+    height: 20.5em;
+    transform-style: preserve-3d;
+    animation: papa 20s linear infinite;
+}
+@keyframes papa{
+    0%{
+        transform: perspective(72.5em) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(72.5em) rotateY(360deg);
+    }
+}
+img{
+    max-width:10em;
+    max-height:20em;
+    margin:1em;
+    margin-bottom: 0%;
+    border-radius: 1em;
+    box-shadow: 5px 5px 30px 1px rgb(255, 255, 255);
+}
+h{
+    font-size: large;
+    margin: 1.5em;
+    margin-top: 0%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+}
+.outer-page .image{
+    position: absolute;
+    top:0;
+    left:0;
+    max-width: 22em;
+    max-height: 20em;
+    transform-origin: center;
+    transform-style: preserve-3d;  
+    transform: rotateY(calc(var(--i)*120deg)) translateZ(21.875em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 20px 5px #bdbdbd;
+    border-radius: 1em;
+    border: 0.1em solid white;
+    background:rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(5px);
+}
+
+.top-section{
+    background-color: hsl(226, 59%, 48%);
+    height: 8.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+}
+.name{
+    font-family:'Fredoka' , sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: aliceblue;
+    font-style: normal;
+    margin-bottom: 1em;
+    text-align: center;
+}
+.pick{
+    max-width: 80px;
+    max-height: 80px;
+    margin-top: 1em;
+    border: none;
+    box-shadow: none;
+}
+@media (min-width : 300px){
+    .top-section{
+        height: 10em;
+    }
+    .name{
+        font-size: 1.5rem;
+    }
+    .outer-page .image{
+         transform: rotateY(calc(var(--i)*120deg)) translateZ(15.875em);
+    }
+}
+@media (min-width : 1200px) {
+    .top-section{
+        height: 8.5em;
+    }
+    .name{
+        font-size: 2.2rem;
+    }.outer-page .image{
+         transform: rotateY(calc(var(--i)*120deg)) translateZ(22.875em);
+    }
+    
+}
+

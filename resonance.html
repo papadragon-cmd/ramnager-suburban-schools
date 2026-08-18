@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="papa D dragon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonance</title>
+    <link rel="stylesheet" href="resonance.css">
+</head>
+<body>
+    <div class="meow">
+        <div>
+            <img src="magazine_(recovered)_06_08_2026_16_10-page001.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page002.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page003.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page004.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page005.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page006.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page007.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page008.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page009.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page010.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page011.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page012.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page013.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page014.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page015.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page016.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page017.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page018.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page019.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page020.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page021.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page022.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page023.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page024.png">
+        </div>
+        <div>
+            <img src="./images/magazine_(recovered)_06_08_2026_16_10-page025.png">
+        </div>
+    </div>
+    <script src="jquery-3.7.1.min.js.js"></script>
+<script src="turn.js"></script>
+
+<script>
+
+function resizeBook() {
+    let width = Math.min(window.innerWidth * 0.95, 1000);
+    let height = width * 0.6;
+
+    $(".meow").turn("size", width, height);
+}
+
+$(".meow").turn({
+    width: Math.min(window.innerWidth * 0.95, 1000),
+    height: Math.min(window.innerWidth * 0.95, 1000) * 1.6,
+    display: window.innerWidth < 700 ? "single" : "double",
+    gradients: true,
+    acceleration: true,
+    duration: 1000
+});
+
+$(window).on("resize", resizeBook);
+</script>
+</body>
+</html>

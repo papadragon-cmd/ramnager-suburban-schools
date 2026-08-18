@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="papa D dragon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>July's journal</title>
+    <link rel="stylesheet" href="june.css">
+</head>
+<body>
+    <div class="meow">
+        <div>
+            <img src="./images/july-page001.png">
+        </div>
+        <div>
+            <img src="./images/july-page002.png">
+        </div>
+        <div>
+            <img src="./images/july-page003.png">
+        </div>
+        <div>
+            <img src="./images/july-page004.png">
+        </div>
+        <div>
+            <img src="./images/july-page005.png">
+        </div>
+    </div>
+    <script src="jquery-3.7.1.min.js.js"></script>
+<script src="turn.js"></script>
+
+<script>
+
+function resizeBook() {
+    let width = Math.min(window.innerWidth * 0.95, 1000);
+    let height = width * 0.6;
+
+    $(".meow").turn("size", width, height);
+}
+
+$(".meow").turn({
+    width: Math.min(window.innerWidth * 0.95, 1000),
+    height: Math.min(window.innerWidth * 0.95, 1000) * 1.6,
+    display: window.innerWidth < 700 ? "single" : "double",
+    gradients: true,
+    acceleration: true,
+    duration: 1000
+});
+
+$(window).on("resize", resizeBook);
+</script>
+</body>
+</html>
